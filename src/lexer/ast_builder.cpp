@@ -79,6 +79,8 @@ class builder {
         block.variable_scope[declaration.name] = std::move(new_var);
 
       } else {
+
+
         
       }
 

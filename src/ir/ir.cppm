@@ -5,9 +5,14 @@ using namespace std;
 
 export {
   enum class opcode {
-    // i = int reg f = float reg, v = int const, c = float const
+    // i = int reg f = float reg, c = constant, u = universal
     // n = jump length, s = skipped
+    setcsu,
+    copyusu,
+    jmpnni,
+    phiuuu,
     castisf,
+    notisi,
     divfff,
     diviif,
     diviii,
@@ -20,25 +25,13 @@ export {
     subiii,
     eqffi,
     eqiii,
-    neqffi,
-    neqiii,
-    gtffi,
-    gtiii,
     ltffi,
     ltiii,
-    geffi,
-    geiii,
     leffi,
     leiii,
     andiii,
     oriii,
-    xoriii,
-    copyisi,
-    setvi,
-    setcf,
-    phiiii,
-    phifff,
-    jmpinn
+    xoriii
   };
 
   struct instruction {
